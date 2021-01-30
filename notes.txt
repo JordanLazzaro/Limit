@@ -16,5 +16,10 @@ Rules for Limit:
     - Joker : 0
     - King (Red) : -1
 
-  Card play abilities:
-    - 
+  Special Rules:
+    If played:
+      * 10 - Look at one of your cards
+      * J - Look at someone else's card
+      * Q - Look at someone else's card and switch w/ one of you own
+      * K - Look at someone else's card as well as one of your own cards and switch if you want
+      * Joker - Look at two other people's cards and swap them if you want
