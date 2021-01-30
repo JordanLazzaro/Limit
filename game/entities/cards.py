@@ -24,7 +24,7 @@ class CardValue(Enum):
 class CardSuit():
   Hearts   = auto()
   Diamonds = auto()
-  Clovers  = auto()
+  Clubs    = auto()
   Spades   = auto()
 
 
