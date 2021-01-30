@@ -1,10 +1,10 @@
 """
-Basic Card class with 
+Basic Card class 
 """
-import enum
+from enum import Enum, auto
 
 
-class CardType(enum.Enum):
+class CardValue(Enum):
   RedKing   = -1
   Joker     = 0
   Ace       = 1
@@ -21,28 +21,34 @@ class CardType(enum.Enum):
   Queen     = 12
   BlackKing = 13
 
-class CardColor(enum.Enum):
-  Red
-  Black
+class CardSuit():
+  Hearts   = auto()
+  Diamonds = auto()
+  Clovers  = auto()
+  Spades   = auto()
+
 
 class Card:
   """ A simple Card object
   Args:
     card_type: a tuple containing value and suite
   
-  Raises: NotImplementedError
+  Raises: ValueError
   """
-  def __init__(self, card_type=None, is_visible=False):
-    if card_type == None:
-      raise NotImplementedError()
-    self.card_type = card_type # tuple: (CardType, CardColor)
+  def __init__(self, card_value=None, card_suit=None, is_visible=False):
+    if card_value == None or not isinstance(card_value, CardValue):
+      raise ValueError("card_type must by of type: CardValue")
+    if card_suit == None or not isinstance(card_suit, CardSuit):
+      raise ValueError("card_suit must by of type: CardSuit")
+    self.card_value = card_value
+    self.card_suit = card_suit
     self.is_visible = is_visible
 
   def __eq__(self, right):
-    return self.card_type == right.card_type
+    return self.card_value == right.card_value
 
   def __ne__(self, right):  
-    return self.card_type != right.card_type
+    return self.card_value != right.card_value
 
   def __lt__(self, right):
     return self.card_value < right.card_value
