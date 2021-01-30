@@ -1,3 +1,4 @@
 #!/bin/bash
-python3 LimitGame.py
+#TODO:take argument for sever or client
+python3 LimitGame.py 
 
