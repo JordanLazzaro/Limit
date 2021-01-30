@@ -14,7 +14,7 @@ class LimitClient:
     try:
 
         # Send data
-        message = 'This is the message.  It will be repeated.'
+        message = b'This is the message.  It will be repeated.'
         print('sending "%s"' % message, file=sys.stderr)
         sock.sendall(message)
 

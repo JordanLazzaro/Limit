@@ -17,7 +17,7 @@ class LimitServer:
                     print('sending data back to the client')
                     self.client_conn.sendall(data)
                 else:
-                    print('no more data from', client_address)
+                    print('no more data from', self.client_address)
                     break
                 
         finally:
