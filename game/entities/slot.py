@@ -5,15 +5,11 @@ class Slot:
 		self.card = None
 		self.locked = False
 
-	isLocked():
-		if self.locked:
-			return True
-		return False	
+	is_locked():
+		return self.locked	
 
-	isEmpty():
-		if self.card == None:
-			return True
-		return False
+	is_empty():
+		self.card == None
 
 	fill(card):
 		self.card = card

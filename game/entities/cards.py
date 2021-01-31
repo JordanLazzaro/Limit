@@ -27,7 +27,6 @@ class CardSuit():
   Clubs    = auto()
   Spades   = auto()
 
-
 class Card:
   """ A simple Card object
   Args:
@@ -37,7 +36,7 @@ class Card:
   """
   def __init__(self, card_value=None, card_suit=None, is_visible=False):
     if card_value == None or not isinstance(card_value, CardValue):
-      raise ValueError("card_type must by of type: CardValue")
+      raise ValueError("card_value must by of type: CardValue")
     if card_suit == None or not isinstance(card_suit, CardSuit):
       raise ValueError("card_suit must by of type: CardSuit")
     self.card_value = card_value
